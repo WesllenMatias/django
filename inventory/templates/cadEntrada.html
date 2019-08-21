@@ -1,0 +1,44 @@
+{% extends "header.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div style="padding-top: 60px; margin: auto; width: 75%;">
+
+    <h2> Cadastro de Entradas </h2>
+        <form method="post">
+            {% csrf_token %}
+               <div class="form-row">
+                    <div class="form-group col-md-4 mb-0">
+                        {{ form_entradas.dt_entrada|as_crispy_field }}
+                    </div>
+                   <div class="form-group col-md-4 mb-0">
+                        {{ form_entradas.lj_origem|as_crispy_field }}
+                   </div>
+                   <div class="form-group col-md-4 mb-0">
+                        {{ form_entradas.categoria|as_crispy_field }}
+                   </div>
+                   <div class="form-group col-md-8 mb-0">
+                        {{ form_entradas.descricao|as_crispy_field }}
+                   </div>
+               </div>
+                <div class="form-row">
+                   <div class="form-group col-md-3 mb-0">
+                        {{ form_entradas.modelo|as_crispy_field }}
+                   </div>
+                   <div class="form-group col-md-3 mb-0">
+                        {{ form_entradas.n_serie|as_crispy_field }}
+                   </div>
+                    <div class="form-group col-md-3 mb-0">
+                        {{ form_entradas.fabricante|as_crispy_field }}
+                    </div>
+                    <div class="form-group col-md-1 mb-0">
+                        {{ form_entradas.qtd_entrada|as_crispy_field }}
+                    </div>
+                    <div class="form-group col-md-6 mb-0">
+                        {{ form_entradas.observacao|as_crispy_field }}
+                    </div>
+                </div>
+
+            <button type="submit" class="btn btn-success">Salvar</button>
+        </form>
+    </div>
+{% endblock %}

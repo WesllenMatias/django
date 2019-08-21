@@ -1,0 +1,40 @@
+{% extends "header.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div style="padding-top: 100px; margin: auto; width: 30%;">
+
+    <h2> Controle TI </h2>
+        <form method="post">
+            {% csrf_token %}
+               <div class="form-row">
+                    <div class="form-group col-md-4 mb-0">
+                        {{ form_control.Hostname|as_crispy_field }}
+                    </div>
+                   <div class="form-group col-md-4 mb-0">
+                        {{ form_control.Ip_Address|as_crispy_field }}
+                   </div>
+                   <div class="form-group col-md-4 mb-0">
+                        {{ form_control.Mac|as_crispy_field }}
+                   </div>
+                   <div class="form-group col-md-8 mb-0">
+                        {{ form_control.Setor|as_crispy_field }}
+                   </div>
+               </div>
+                <div class="form-row">
+                   <div class="form-group col-md-3 mb-0">
+                        {{ form_control.Responsavel|as_crispy_field }}
+                   </div>
+                   <div class="form-group col-md-3 mb-0">
+                        {{ form_control.Contato|as_crispy_field }}
+                   </div>
+                    <div class="form-group col-md-3 mb-0">
+                        {{ form_control.Servico|as_crispy_field }}
+                    </div>
+                    <div class="form-group col-md-1 mb-0">
+                        {{ form_control.Observacao|as_crispy_field }}
+                    </div>
+                </div>
+            <button type="submit" class="btn btn-success">Salvar</button>
+        </form>
+    </div>
+{% endblock %}

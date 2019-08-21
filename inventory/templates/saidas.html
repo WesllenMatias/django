@@ -1,0 +1,36 @@
+{% extends "header.html" %}
+{% block content %}
+    <div style="padding-top: 100px">
+
+    <h2> Saidas </h2>
+    <div>
+        <table class="table table-sm table-bordered table-striper table-dark">
+            <thead class="bg-success">
+                <tr>
+                    <th> Descrição</th>
+                    <th> Categoria</th>
+                    <th> Modelo</th>
+                    <th> Data de Entrada</th>
+                    <th> Fabricante</th>
+                    <th> Loja Destino</th>
+                    <th> Quantidade</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            {% for Saida in Saidas %}
+            <tr>
+                <td>{{ Saida.descricao }}</td>
+                <td>{{ Saida.categoria }}</td>
+                <td>{{ Saida.modelo }}</td>
+                <td>{{ Saida.dt_saida }}</td>
+                <td>{{ Saida.fabricante }}</td>
+                <td>{{ Saida.lj_destino }}</td>
+                <td>{{ Saida.qtd_saida }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    </div>
+{% endblock %}

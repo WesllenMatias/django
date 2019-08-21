@@ -1,0 +1,45 @@
+{% extends "header.html" %}
+{% block content %}
+    <div style="padding-top: 100px">
+
+    <h2> Entradas </h2>
+
+    <div class="text-right" style="padding-bottom: 5px;">
+        <a class="btn btn-outline-success" href="{% url 'url_cadEntrada' %}" role="button">Adicionar</a>
+        <a class="btn btn-outline-success" href="{% url 'url_cadEntrada' %}" role="button">Alterar</a>
+        <a class="btn btn-outline-danger" href="{% url 'url_cadEntrada' %}" role="button">Remover</a>
+    </div>
+    <div>
+        <table class="table table-sm table-bordered table-striper table-dark">
+            <thead class="bg-success">
+                <tr>
+                    <th> Descrição</th>
+                    <th> Categoria</th>
+                    <th> Modelo</th>
+                    <th> Data de Entrada</th>
+                    <th> Fabricante</th>
+                    <th> Loja Origem</th>
+                    <th> Quantidade</th>
+                </tr>
+            </thead>
+            <tbody id="myTable">
+
+            {% for Entrada in Entradas %}
+            <tr>
+                <td>{{ Entrada.descricao }}</td>
+                <td>{{ Entrada.categoria }}</td>
+                <td>{{ Entrada.modelo }}</td>
+                <td>{{ Entrada.dt_entrada }}</td>
+                <td>{{ Entrada.fabricante }}</td>
+                <td>{{ Entrada.lj_origem }}</td>
+                <td>{{ Entrada.qtd_entrada }}</td>
+            </tr>
+            {% endfor %}
+
+            </tbody>
+        </table>
+    </div>
+
+    </div>
+{% endblock %}
+
