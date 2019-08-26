@@ -17,14 +17,14 @@ class Fabricante(models.Model):
 
 class Loja(models.Model):
     dt_criacao_lj = models.DateTimeField(auto_now_add=True)
-    nome_lj = models.CharField(max_length=20, verbose_name="Descrição da Loja")
+    nome_lj = models.CharField(max_length=20, default="", verbose_name="Descrição da Loja")
 
     def __str__(self):
         return self.nome_lj
 
 class Setor(models.Model):
     dt_criacao_setor = models.DateTimeField(auto_now_add=True)
-    nome_setor = models.CharField(max_length=20,verbose_name="Descrição do Setor")
+    nome_setor = models.CharField(max_length=20, default="", verbose_name="Descrição do Setor")
 
     def __str__(self):
         return self.nome_setor
@@ -64,8 +64,8 @@ class controleti(models.Model):
     Ip_Address = models.GenericIPAddressField(protocol='Ipv4', verbose_name="Endereço IP")
     Mac = models.CharField(max_length=17)
     Hostname = models.CharField(max_length=80, verbose_name="Nome da Máquina")
-    Setor = models.ForeignKey(Setor, on_delete=models.CASCADE)
-    Loja = models.ForeignKey(Loja, on_delete=models.CASCADE, verbose_name="Loja")
+    setor = models.CharField(max_length=30, verbose_name="Setor", default="")
+    Loja = models.ForeignKey(Loja, on_delete=models.CASCADE,default="")
     Responsavel = models.CharField(max_length=120, verbose_name="Responsável")
     Contato = models.CharField(max_length=120)
     Observacao = models.TextField(max_length=300, verbose_name="Observação")

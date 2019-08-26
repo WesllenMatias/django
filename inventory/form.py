@@ -35,4 +35,4 @@ class SetorForm(ModelForm):
 class ControletiForm(ModelForm):
     class Meta:
         model = controleti
-        fields = ['Hostname', 'Ip_Address', 'Mac', 'Setor', 'Loja', 'Responsavel', 'Contato', 'Servico', 'Observacao']
+        fields = ['Hostname', 'Ip_Address', 'Mac', 'setor', 'Loja', 'Responsavel', 'Contato', 'Servico', 'Observacao']
