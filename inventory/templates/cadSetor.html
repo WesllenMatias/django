@@ -3,11 +3,11 @@
 {% block content %}
     <div style="padding-top: 100px; margin: auto; width: 40%;">
     <div class="jumbotron">
-    <h2> Cadastro de Fabricantes </h2>
+    <h2> Cadastro de Setores </h2>
         <form method="post">
             {% csrf_token %}
 
-            {{ form_fab | crispy }}
+            {{ form_setor | crispy }}
 
             <button type="submit" class="btn btn-success">Salvar</button>
         </form>

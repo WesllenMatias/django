@@ -1,8 +1,8 @@
 {% extends "header.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
-    <div style="padding-top: 100px; margin: auto; width: 30%;">
-
+    <div style="padding-top: 100px; margin: auto; width: 40%;">
+    <div class="jumbotron">
     <h2> Cadastro de Categorias </h2>
         <form method="post">
             {% csrf_token %}
@@ -12,20 +12,6 @@
             <button type="submit" class="btn btn-success">Salvar</button>
         </form>
     </div>
-        <div>
-        <table class="table table-sm table-bordered table-striper table-dark">
-            <thead class="bg-success">
-                <tr>
-                    <th> Descrição</th>
-                </tr>
-            </thead>
-            <tbody>
-            {% for Categoria in Categorias %}
-                <tr>
-                    <td>{{ Categoria.nome_cat }}</td>
-                </tr>
-            {% endfor %}
-            </tbody>
-        </table>
     </div>
+
 {% endblock %}

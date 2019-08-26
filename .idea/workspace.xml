@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7362e7c3-c0a6-4ecf-8396-948ead3ed41e" name="Default Changelist" comment="" />
+    <list default="true" id="7362e7c3-c0a6-4ecf-8396-948ead3ed41e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/inventory/templates/cadSetor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/form.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/form.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/templates/cadCategorias.html" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/templates/cadCategorias.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/templates/cadControleti.html" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/templates/cadControleti.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/templates/cadEntrada.html" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/templates/cadEntrada.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/templates/cadFabricantes.html" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/templates/cadFabricantes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/templates/cadLojas.html" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/templates/cadLojas.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/templates/cadSaida.html" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/templates/cadSaida.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sys_inventario/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/sys_inventario/urls.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +31,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">

@@ -4,7 +4,7 @@ from .models import Entrada
 from .models import Saida
 from .models import Categoria
 from .models import controleti
-from .form import EntradaForm, SaidaForm, CategoriaForm, LojaForm, FabricanteForm, ControletiForm
+from .form import EntradaForm, SaidaForm, CategoriaForm, LojaForm, FabricanteForm, ControletiForm, SetorForm
 from django.db.models import Sum
 
 # Create your views here.
@@ -82,6 +82,17 @@ def FabForm(request):
 
      data['form_fab'] = form_fab
      return render(request, 'cadFabricantes.html', data)
+
+def SetForm(request):
+    data = {}
+    form_setor = SetorForm(request.POST or None)
+
+    if form_setor.is_valid():
+        form_setor.save()
+        return redirect('url_cadSetor')
+
+    data['form_setor'] = form_setor
+    return render(request,'cadSetor.html', data)
 
 def qtdTotal(request):
     data = {}

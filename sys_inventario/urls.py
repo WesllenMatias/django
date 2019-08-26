@@ -15,7 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from inventory.views import list, listExit, EntForm, SaiForm, CatForm, LjForm, FabForm, ControletiForm, listControleti
+from inventory.views import list, listExit, EntForm, SaiForm, CatForm, LjForm, FabForm, ControlForm, listControleti
+from inventory.views import SetForm
 
 urlpatterns = [
     path('admin/', admin.site.urls, name='url_adm'),
@@ -26,6 +27,7 @@ urlpatterns = [
     path('cadCategoria/', CatForm, name='url_cadCategorias'),
     path('cadLoja/', LjForm, name='url_cadLojas'),
     path('cadFabricante/', FabForm, name='url_cadFabricantes'),
-    path('cadControleti/', ControletiForm, name='url_cadControleti'),
-    path('listControleti/', listControleti, name='url_listControleti')
+    path('cadControleti/', ControlForm, name='url_cadControleti'),
+    path('listControleti/', listControleti, name='url_listControleti'),
+    path('cadSetor', SetForm, name='url_cadSetor')
 ]

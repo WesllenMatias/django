@@ -1,5 +1,5 @@
 from django.forms import ModelForm
-from inventory.models import Entrada, Saida, Categoria, Loja, Fabricante, controleti
+from inventory.models import Entrada, Saida, Categoria, Loja, Fabricante, controleti, Setor
 
 
 class EntradaForm(ModelForm):
@@ -27,7 +27,12 @@ class FabricanteForm(ModelForm):
         model = Fabricante
         fields = ['nome_fab']
 
+class SetorForm(ModelForm):
+    class Meta:
+        model = Setor
+        fields = ['nome_setor']
+
 class ControletiForm(ModelForm):
     class Meta:
         model = controleti
-        fields = ['Hostname', 'Ip_Address', 'Mac', 'Setor', 'Responsavel', 'Contato', 'Servico', 'Observacao']
+        fields = ['Hostname', 'Ip_Address', 'Mac', 'Setor', 'Loja', 'Responsavel', 'Contato', 'Servico', 'Observacao']
