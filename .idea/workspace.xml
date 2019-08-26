@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7362e7c3-c0a6-4ecf-8396-948ead3ed41e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/inventory/migrations/0005_auto_20190826_1955.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory/form.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/form.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory/templates/cadControleti.html" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/templates/cadControleti.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory/templates/cadEntrada.html" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/templates/cadEntrada.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/templates/cadSaida.html" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/templates/cadSaida.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +71,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566843412350</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Resolvido problema do makemigrate, quanto aos campos foreingkeys">
+      <created>1566850987455</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1566850987455</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -95,6 +97,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Correção do erro em cadControleti, adicionado jumbotron nos forms, adicionado novo cadastro ( cadSetor )." />
     <MESSAGE value="Banco de dados Recriado." />
-    <option name="LAST_COMMIT_MESSAGE" value="Banco de dados Recriado." />
+    <MESSAGE value="Resolvido problema do makemigrate, quanto aos campos foreingkeys" />
+    <option name="LAST_COMMIT_MESSAGE" value="Resolvido problema do makemigrate, quanto aos campos foreingkeys" />
   </component>
 </project>
