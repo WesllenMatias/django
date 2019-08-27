@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7362e7c3-c0a6-4ecf-8396-948ead3ed41e" name="Default Changelist" comment="">
+    <list default="true" id="7362e7c3-c0a6-4ecf-8396-948ead3ed41e" name="Default Changelist" comment="Alterado o tamanho do campo qtd_saida">
+      <change afterPath="$PROJECT_DIR$/inventory/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory/templates/cadSaida.html" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/templates/cadSaida.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -78,7 +78,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566850987455</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Alterado o tamanho do campo qtd_saida">
+      <created>1566852663220</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1566852663220</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -98,6 +105,7 @@
     <MESSAGE value="Correção do erro em cadControleti, adicionado jumbotron nos forms, adicionado novo cadastro ( cadSetor )." />
     <MESSAGE value="Banco de dados Recriado." />
     <MESSAGE value="Resolvido problema do makemigrate, quanto aos campos foreingkeys" />
-    <option name="LAST_COMMIT_MESSAGE" value="Resolvido problema do makemigrate, quanto aos campos foreingkeys" />
+    <MESSAGE value="Alterado o tamanho do campo qtd_saida" />
+    <option name="LAST_COMMIT_MESSAGE" value="Alterado o tamanho do campo qtd_saida" />
   </component>
 </project>
