@@ -6,29 +6,50 @@ from .models import Categoria
 from .models import controleti
 from .form import EntradaForm, SaidaForm, CategoriaForm, LojaForm, FabricanteForm, ControletiForm, SetorForm
 from django.db.models import Sum
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
+def registro(request):
+    if request.method == "POST":
+        reg = UserCreationForm(request.POST)
+        if reg.is_valid():
+            reg.save()
+            return redirect('url_login')
+    else:
+        reg = UserCreationForm()
+    return render (request, 'registro.html', {'reg':reg})
+
+@login_required
+def home(request):
+    return render(request, 'listControleti.html')
+
+@login_required
 def list(request):
     data ={}
     data ['Entradas'] = Entrada.objects.all()
     return render(request, 'list.html', data)
 
+@login_required
 def listControleti(request):
     data ={}
     data ['Controleti'] = controleti.objects.all()
     return render(request, 'listControleti.html', data)
 
+@login_required
 def listExit(request):
     data = {}
     data['Saidas'] = Saida.objects.all()
     return render(request, 'saidas.html', data)
 
+@login_required
 def listCategoria(request):
     data = {}
     data['Categorias'] = Categoria.objects.all()
     return render(request, 'cadCategorias.html', data)
 
+@login_required
 def EntForm(request):
     data = {}
     form_entradas = EntradaForm(request.POST or None)
@@ -40,6 +61,7 @@ def EntForm(request):
     data['form_entradas'] = form_entradas
     return render(request, 'cadEntrada.html', data)
 
+@login_required
 def SaiForm(request):
     data1 = {}
     form_saidas = SaidaForm(request.POST or None)
@@ -51,6 +73,7 @@ def SaiForm(request):
     data1['form_saidas'] = form_saidas
     return render(request, 'cadSaida.html', data1)
 
+@login_required
 def CatForm(request):
     data = {}
     form_categorias = CategoriaForm(request.POST or None)
@@ -62,6 +85,7 @@ def CatForm(request):
     data['form_categorias'] = form_categorias
     return render(request, 'cadCategorias.html', data)
 
+@login_required
 def LjForm(request):
      data = {}
      form_lj = LojaForm(request.POST or None)
@@ -72,6 +96,7 @@ def LjForm(request):
      data['form_lj'] = form_lj
      return render(request, 'cadLojas.html', data)
 
+@login_required
 def FabForm(request):
      data = {}
      form_fab = FabricanteForm(request.POST or None)
@@ -83,6 +108,7 @@ def FabForm(request):
      data['form_fab'] = form_fab
      return render(request, 'cadFabricantes.html', data)
 
+@login_required
 def SetForm(request):
     data = {}
     form_setor = SetorForm(request.POST or None)
@@ -98,6 +124,7 @@ def qtdTotal(request):
     data = {}
     data['Total'] = Saida.objects.all(Sum(qtdTotal))
 
+@login_required
 def ControlForm(request):
     data = {}
     form_control = ControletiForm(request.POST or None)

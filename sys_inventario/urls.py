@@ -16,11 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from inventory.views import list, listExit, EntForm, SaiForm, CatForm, LjForm, FabForm, ControlForm, listControleti
-from inventory.views import SetForm
+from inventory.views import SetForm, home, registro
+from django.contrib.auth.views import LoginView, LogoutView
 
 urlpatterns = [
     path('admin/', admin.site.urls, name='url_adm'),
-    path('', list, name='url_list'),
+    path('', LoginView.as_view(), name='url_login'),
+    path('home/', home,  name='url_home'),
+    path('registro/', registro, name='url_registro'),
+    path('list/', list, name='url_list'),
     path('saidas/', listExit, name='url_list_saida'),
     path('cadEntrada/', EntForm, name='url_cadEntrada'),
     path('cadSaida/', SaiForm, name='url_cadSaida'),
@@ -29,5 +33,6 @@ urlpatterns = [
     path('cadFabricante/', FabForm, name='url_cadFabricantes'),
     path('cadControleti/', ControlForm, name='url_cadControleti'),
     path('listControleti/', listControleti, name='url_listControleti'),
-    path('cadSetor', SetForm, name='url_cadSetor')
+    path('cadSetor', SetForm, name='url_cadSetor'),
+    path('logout/', LogoutView.as_view(next_page='url_login'), name="url_logout")
 ]
