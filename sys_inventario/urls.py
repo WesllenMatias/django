@@ -19,6 +19,7 @@ from inventory.views import list, listExit, EntForm, SaiForm, CatForm, LjForm, F
 from inventory.views import SetForm, home, registro
 from django.contrib.auth.views import LoginView, LogoutView
 
+
 urlpatterns = [
     path('admin/', admin.site.urls, name='url_adm'),
     path('', LoginView.as_view(), name='url_login'),
