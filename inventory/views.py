@@ -8,7 +8,6 @@ from .form import EntradaForm, SaidaForm, CategoriaForm, LojaForm, FabricanteFor
 from django.db.models import Sum
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
-
 # Create your views here.
 
 def registro(request):
@@ -23,7 +22,7 @@ def registro(request):
 
 @login_required
 def home(request):
-    return render(request, 'listControleti.html')
+    return render(request, 'home.html')
 
 @login_required
 def list(request):
@@ -123,6 +122,7 @@ def SetForm(request):
 def qtdTotal(request):
     data = {}
     data['Total'] = Saida.objects.all(Sum(qtdTotal))
+    return HttpResponse('list.html')
 
 @login_required
 def ControlForm(request):
